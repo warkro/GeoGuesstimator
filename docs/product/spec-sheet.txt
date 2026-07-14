@@ -1,0 +1,42 @@
+Specification Sheet
+1. Game Overview
+Objective: Players are shown an image (e.g., a photo submitted by a team member) and must guess its location by pinning a spot on a map. Points are awarded based on the accuracy of their guess.
+Modes: Solo, team, and competitive modes (e.g., leaderboard, streaks, time attack).
+2. Core Features
+Interactive Map Interface: Players use a map (world, region, or custom) to place their guess. Powered by a mapping API (e.g., Leaflet, Google Maps).
+Image Display: Each round starts with a photo or street view image. Images can be sourced from team submissions or a curated set.
+Pin Placement: Players click/tap to drop a pin where they believe the location is.
+Scoring System: Points are calculated based on the distance between the player’s guess and the actual location. Example: max 5000 points per round, decreasing with distance.
+Hints: Optionally, hints can be provided (e.g., region, country, continent) to make the game accessible for all skill levels.
+Leaderboard: Track individual and team scores, display high scores, and recognize weekly winners.
+Responsive Design: Works on desktop, tablet, and mobile devices.
+3. Game Flow
+Start Game: Player or host initiates the game.
+View Image: An image is displayed to all participants.
+Make Guess: Players place their pin on the map.
+Submit Guess: Players confirm their guess.
+Reveal Answer: The correct location is shown, and scores are calculated.
+Continue: Next round begins; repeat for a set number of rounds or until time runs out.
+End Game: Final scores and winners are announced.
+4. Technical Requirements
+Frontend: React (recommended), Tailwind CSS for UI, Leaflet or Google Maps for map interactions.
+Backend: Node.js or Firebase for real-time multiplayer, score tracking, and image management.
+Image Storage: Secure storage for submitted images (e.g., Azure Blob, Firebase Storage).
+Authentication: Optional login for tracking scores and submissions.
+Accessibility: Ensure map and image interfaces are accessible (keyboard navigation, alt text).
+5. Customization & Team Features
+Custom Image Sets: Allow organizers to upload department photos for event-specific rounds.
+Team Play: Players can compete individually or in teams; scores can be aggregated.
+Award Integration: Weekly winners can be highlighted in event presentations and emails.
+Polls & Feedback: Use MS Forms or Outlook polls for voting on awards and collecting feedback.
+6. Security & Privacy
+Image Moderation: Review submitted images for appropriateness before use.
+Data Protection: Ensure compliance with organizational privacy policies for user data and images.
+7. Sample Round
+Image: “Photo of a landmark or place.”
+Hint: “Located in Southeast Asia.”
+Player Action: Pin a location on the map.
+Scoring: Closest guess receives maximum points; others receive points based on proximity.
+References & Team Input
+Game mechanics and requirements were shaped by your team’s collaborative discussions and feedback.
+Technical and feature inspiration from open-source Geo Guesser clones and guides.

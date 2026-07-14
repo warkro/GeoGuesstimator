@@ -1,0 +1,195 @@
+GeoGuesstimator - Game Specification
+Overview
+GeoGuesstimator is an interactive team game where participants attempt to:
+Guess where a photo was taken by placing a pin on a map.
+Guess what was happening in the photo.
+Earn points based on both accuracy and speed.
+The game is designed for the August Jolly Ranchers event as a fun, collaborative summer activity using employee-submitted photos.
+Objectives
+Primary Goal
+Accumulate the highest total score by correctly identifying:
+Photo location
+Situation or activity occurring in the photo
+Secondary Goals
+Encourage participation
+Foster team engagement
+Promote storytelling and recognition among team members
+Create a fun and visual summer event experience
+Game Components
+Photo Submission
+Participants submit:
+Field
+Requirement
+Photo
+Required
+Location
+Required
+Description of Event/Activity
+Required
+Additional Context
+Optional
+
+Examples:
+Family vacation at Niagara Falls
+Watching a baseball game in Houston
+Hiking in Banff
+Birthday celebration
+Team event
+This information remains hidden from players and is used as the answer key.
+Round Structure
+Each round consists of a single photo.
+The photo is displayed to all players.
+Players complete two challenges.
+Challenge 1: Location Guess
+Player Experience
+View photo
+Open interactive world map
+Place a pin where they believe the photo was taken
+Submit answer
+Scoring
+Points are awarded based on distance from actual location.
+Distance from Actual Location
+Points
+Exact Match
+1000
+Very Close
+750
+Close
+500
+Same Region
+250
+Far Away
+100
+Extremely Incorrect
+0-50
+
+(Scoring values configurable.)
+Challenge 2: Situation Guess
+Possible Modes
+Option A - Multiple Choice (Recommended)
+Generated from participant description.
+Example:
+Photo shows a beach.
+Choices:
+A. Attending a wedding
+B. Family vacation
+C. Team retreat
+D. Concert
+Correct answer: Family vacation
+Option B - Free Text
+Players type their guess.
+AI compares the guess to the submitted description.
+Example:
+Actual: "Family vacation in Mexico."
+Player: "Vacation with family on a tropical beach."
+Receives partial or full credit.
+Discussion participants leaned toward a multiple-choice approach to balance difficulty and participation.
+Combined Scoring
+Round Score
+Total Round Score =
+Location Points +
+Situation Points
+
+Example:
+Location Score = 800
+Situation Score = 200
+Total = 1000
+Speed Bonus (Optional)
+Bonus points may be awarded for faster submissions.
+Example:
+Submission Order
+Bonus
+1st
++100
+2nd
++75
+3rd
++50
+Others
++25
+
+This concept was discussed as similar to Kahoot-style scoring.
+Leaderboard
+After each round:
+Display:
+Rank
+Player
+Score
+1
+Player A
+3,200
+2
+Player B
+2,950
+3
+Player C
+2,500
+
+Leaderboard updates after every photo.
+Event Flow
+Start
+Host launches game
+Players join via URL or session code
+Rules displayed
+Per Photo
+Show photo
+Players submit map location
+Players answer situation question
+System calculates score
+Reveal:
+Actual location
+Story behind photo
+Submitted description
+Round winners
+End of Game
+Display:
+Final leaderboard
+Top scorer
+Most accurate mapper
+Best situation guesser
+Funniest incorrect answer (optional)
+Timing Estimates
+Based on discussion during the planning meeting:
+Activity
+Duration
+Join & Introduction
+5 mins
+Each Photo Round
+~1 minute
+15 Photos
+~15 mins
+30 Photos
+~30 mins
+Winner Review
+5 mins
+
+Expected Event Window:
+30–40 minutes within the approximately one-hour August session.
+Technical Requirements
+Front End
+Responsive web application
+Interactive map control
+Real-time leaderboard
+Mobile friendly
+Back End
+Photo database
+Location coordinate storage
+Scoring engine
+Session management
+AI-assisted situation matching (optional)
+Administration
+Host can:
+Upload photos
+View results
+Start/end rounds
+Reveal answers
+Export scores
+Suggested MVP (Version 1)
+For the August event, keep it simple:
+✅ Photo Display
+✅ Map Pin Guessing
+✅ Multiple Choice Situation Question
+✅ Automatic Scoring
+✅ Real-Time Leaderboard
+✅ Final Winner Screen
+

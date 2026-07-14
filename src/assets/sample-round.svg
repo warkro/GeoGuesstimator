@@ -1,0 +1,16 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="40" fill="#123047"/>
+  <rect y="500" width="1200" height="300" fill="#1B5A7A"/>
+  <path d="M0 513C129 454 220 453 341 488C474 526 585 531 708 487C869 430 973 445 1200 530V800H0V513Z" fill="#2E82A7"/>
+  <path d="M768 168H845V520H768V168Z" fill="#B6DAE7"/>
+  <path d="M737 214H876V266H737V214Z" fill="#8EC3D9"/>
+  <path d="M699 344H914V401H699V344Z" fill="#8EC3D9"/>
+  <path d="M394 271H472V520H394V271Z" fill="#E3EFF2"/>
+  <path d="M472 215H559V520H472V215Z" fill="#C7DFE8"/>
+  <path d="M559 149H649V520H559V149Z" fill="#9CC3D6"/>
+  <path d="M317 520H730L645 610H396L317 520Z" fill="#C2DDE7"/>
+  <circle cx="936" cy="148" r="58" fill="#FFD76A"/>
+  <path d="M76 612C180 570 266 554 370 570C492 590 620 669 730 666C835 663 929 586 1036 564C1090 553 1142 556 1200 578V800H0V670C28 651 50 634 76 612Z" fill="#143A53" fill-opacity="0.28"/>
+  <text x="84" y="114" fill="#F5F7F8" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Sample clue image</text>
+  <text x="84" y="166" fill="#D5E5EC" font-family="Segoe UI, Arial, sans-serif" font-size="28">Skyline-inspired illustration for the first GeoGuesstimator round</text>
+</svg>

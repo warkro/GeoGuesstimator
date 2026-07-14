@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: geoguesstimator
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
