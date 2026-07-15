@@ -14,6 +14,7 @@ type Identity = {
 }
 
 const STORAGE_KEY = 'geoguesstimator.multiplayer.identity'
+const INVALID_SESSION_MESSAGE = 'Session credentials are no longer valid.'
 
 function App() {
   const [identity, setIdentity] = useState<Identity | null>(() => loadIdentity())
@@ -52,7 +53,17 @@ function App() {
     })
 
     nextSocket.on('connect_error', (error) => {
-      setErrorMessage(error.message)
+      if (error.message === INVALID_SESSION_MESSAGE) {
+        clearIdentity()
+        setIdentity(null)
+        setSnapshot(null)
+        snapshotMetaRef.current = null
+        setErrorMessage('Your saved room is no longer available. Create a new room or join again with a fresh session code.')
+        setConnectionLabel('Offline')
+        return
+      }
+
+      setErrorMessage(getSocketErrorMessage(error.message))
       setConnectionLabel('Offline')
     })
 
@@ -569,6 +580,14 @@ function persistIdentity(identity: Identity) {
 
 function clearIdentity() {
   localStorage.removeItem(STORAGE_KEY)
+}
+
+function getSocketErrorMessage(message: string) {
+  if (message === 'xhr poll error' || message === 'websocket error') {
+    return 'The room server is unavailable right now. Start the backend with npm run dev, or if this is deployed, verify the Render web service is running.'
+  }
+
+  return message
 }
 
 async function postJson<ResponseType>(url: string, payload: unknown) {

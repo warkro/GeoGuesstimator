@@ -314,7 +314,7 @@ function normalizeCode(value) {
     return value?.trim().toUpperCase() ?? '';
 }
 function generateCode() {
-    let candidate = '';
+    let candidate;
     do {
         candidate = Array.from({ length: 5 }, () => CODE_ALPHABET[Math.floor(Math.random() * CODE_ALPHABET.length)]).join('');
     } while (sessions.has(candidate));
