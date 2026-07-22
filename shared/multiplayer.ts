@@ -1,4 +1,3 @@
-import type { RoundImageKey } from './rounds.js'
 import type { Coordinates } from './scoring.js'
 
 export type SessionPhase = 'lobby' | 'guessing' | 'reveal' | 'complete'
@@ -33,7 +32,7 @@ export type SessionRoundView = {
   clue: string
   situationPrompt: string
   situationOptions: string[]
-  imageKey: RoundImageKey
+  imageUrl: string
   locationName?: string
   story?: string
   answer?: Coordinates
