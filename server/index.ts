@@ -364,7 +364,7 @@ function buildRoundView(round: RoundContent, revealVisible: boolean): SessionRou
     clue: round.clue,
     situationPrompt: round.situationPrompt,
     situationOptions: round.situationOptions,
-    imageKey: round.imageUrl,
+    imageUrl : round.imageUrl,
     ...(revealVisible
       ? {
           locationName: round.locationName,
