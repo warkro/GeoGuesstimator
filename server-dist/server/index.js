@@ -269,7 +269,7 @@ function buildRoundView(round, revealVisible) {
         clue: round.clue,
         situationPrompt: round.situationPrompt,
         situationOptions: round.situationOptions,
-        imageKey: round.imageKey,
+        imageKey: round.imageUrl,
         ...(revealVisible
             ? {
                 locationName: round.locationName,

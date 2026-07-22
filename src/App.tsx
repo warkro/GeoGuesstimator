@@ -107,7 +107,7 @@ function App() {
   )
 
   const currentRound = snapshot?.currentRound ?? null
-  const currentImageSrc = currentRound ? roundAssetByKey[currentRound.imageKey] : null
+  const currentImageSrc = currentRound?.imageUrl ?? null
   const isLobby = snapshot?.phase === 'lobby'
   const isGuessing = snapshot?.phase === 'guessing'
   const isReveal = snapshot?.phase === 'reveal'

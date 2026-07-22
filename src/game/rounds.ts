@@ -13,7 +13,7 @@ export const roundAssetByKey: Record<RoundImageKey, string> = {
 
 export const localRoundSet: RoundData[] = roundPack.map((round) => ({
   ...round,
-  imageSrc: roundAssetByKey[round.imageKey],
+  imageSrc: roundAssetByKey[round.imageUrl],
 }))
 
 export const sampleRound = localRoundSet[0]
